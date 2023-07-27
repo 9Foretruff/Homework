@@ -4,6 +4,13 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/1.JavaSyntax" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/2.JavaCore" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/3.JavaMultithreading" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/4.JavaCollections" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaRushTasks/5.OnlineInternship" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
