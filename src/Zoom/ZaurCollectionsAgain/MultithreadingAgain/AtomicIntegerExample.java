@@ -2,6 +2,7 @@ package Zoom.ZaurCollectionsAgain.MultithreadingAgain;
 
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 
 public class AtomicIntegerExample {
     //    static int counter;
@@ -11,6 +12,8 @@ public class AtomicIntegerExample {
 //        counter++
 //        counter.incrementAndGet();
         counter.addAndGet(-5);
+        AtomicIntegerArray integerArray = new AtomicIntegerArray(new int[]{1,2,3,4});
+        System.out.println(integerArray);
 //        counter.getAndSet(5);
     }
 
