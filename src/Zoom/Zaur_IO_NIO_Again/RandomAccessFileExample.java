@@ -12,7 +12,7 @@ public class RandomAccessFileExample {
             System.out.println((char) a);
             String s1 = file.readLine();
             System.out.println(s1);
-            
+
             file.seek(101);
             s1 = file.readLine();
             System.out.println(s1);
