@@ -26,6 +26,16 @@ public class ChannelBufferEx1 {
                 byteRead = channel.read(byteBuffer);
             }
             System.out.println(stix);
+
+            String text = "\nBattle on – and win your battle!";
+
+//            ByteBuffer byteBuffer1 = ByteBuffer.allocate(text.getBytes().length);
+//            byteBuffer1.put(text.getBytes());
+//            byteBuffer1.flip();
+//            channel.write(byteBuffer1);
+            ByteBuffer byteBuffer2 = ByteBuffer.wrap(text.getBytes());
+            channel.write(byteBuffer2);
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
