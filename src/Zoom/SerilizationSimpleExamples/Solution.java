@@ -1,5 +1,6 @@
 package Zoom.SerilizationSimpleExamples;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,10 +13,13 @@ public class Solution {
 
     public static class JavaRush implements Serializable {
         public List<User> users = new ArrayList<>();
+
     }
 }
 
 class User implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 2274410216564924662L;
     private String firstName;
     private String lastName;
     private Date birthDate;
