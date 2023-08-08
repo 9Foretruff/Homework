@@ -1,5 +1,6 @@
 package Zoom.ZaurReflection;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -54,10 +55,39 @@ public class Ex1 {
 
         Method[] allMethods2 = employee1.getDeclaredMethods();
         for (Method method : allMethods) {
-            if (Modifier.isPublic(method.getModifiers()))
+            if (Modifier.isPublic(method.getModifiers())) {
                 System.out.println("Name of method = " + method.getName() +
                         " , return type = " + method.getReturnType() + " , parameter types = "
                         + Arrays.toString(method.getParameterTypes()));
+            }
+        }
+
+        System.out.println("___________________");
+
+        Constructor constructor1 = employee1.getConstructor();
+        System.out.println("Constructor has " + constructor1.getParameterCount() +
+                " parameters , their types are : " + Arrays.toString(constructor1.getParameterTypes()));
+
+        System.out.println("___________________");
+
+        Constructor constructor2 = employee1.getConstructor(int.class, String.class, String.class);
+        System.out.println("Constructor has " + constructor2.getParameterCount() +
+                " parameters , their types are : " + Arrays.toString(constructor2.getParameterTypes()));
+
+        System.out.println("___________________");
+
+        Constructor[] allConstructors = employee1.getConstructors();
+        for (Constructor constructor : allConstructors) {
+            System.out.println("Constructor name = " + constructor.getName() + " , has " + constructor.getParameterCount() +
+                    " parameters , their types are : " + Arrays.toString(constructor.getParameterTypes()));
+        }
+
+        System.out.println("___________________");
+
+        Constructor[] allConstructors2 = employee1.getDeclaredConstructors();
+        for (Constructor constructor : allConstructors2) {
+            System.out.println("Constructor name = " + constructor.getName() + " , has " + constructor.getParameterCount() +
+                    " parameters , their types are : " + Arrays.toString(constructor.getParameterTypes()));
         }
     }
 }
